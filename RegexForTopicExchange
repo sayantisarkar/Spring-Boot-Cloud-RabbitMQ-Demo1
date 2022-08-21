@@ -1,0 +1,11 @@
+Topic Exchange Regex Standard
+===============================
+The routing key must be a list of words, delimited by a period (.), 
+examples are agreements.us and  agreements.eu.stockholm  
+which in this case identifies agreements that are set up for a company with offices 
+in lots of different locations. 
+The routing patterns may contain an asterisk (“*”) to match a word in a specific position 
+of the routing key (e.g., a routing pattern of "agreements.*.*.b.*" only match routing keys 
+where the first word is "agreements" and the fourth word is "b"). A pound symbol (“#”) indicates 
+match on zero or more words (e.g., a routing pattern of "agreements.eu.berlin.#" matches any routing keys 
+beginning with "agreements.eu.berlin"). 
